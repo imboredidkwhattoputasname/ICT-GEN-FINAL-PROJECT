@@ -1,0 +1,10 @@
+h1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;           /* Optional: Centers form in the middle of the viewport */
+}
