@@ -2,8 +2,7 @@
 include 'connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    // Use the names we found in your Array debug
+
     $f = $_POST['firstname']; 
     $l = $_POST['lastname'];
     $e = $_POST['email'];
@@ -12,9 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss", $f, $l, $e);
 
     if ($stmt->execute()) {
-        // This is the magic line that re-routes the user
         header("Location: thanks.html");
-        exit(); // Always call exit() after a header redirect
+        exit();
     } else {
         echo "DB Error: " . $stmt->error;
     }
