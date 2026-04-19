@@ -3,8 +3,8 @@ include 'connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $f = $_POST['firstname']; 
-    $l = $_POST['lastname'];
+    $f = $_POST['first']; 
+    $l = $_POST['last'];
     $e = $_POST['email'];
 
     $stmt = $conn->prepare("INSERT INTO users (first, last, email) VALUES (?, ?, ?)");
